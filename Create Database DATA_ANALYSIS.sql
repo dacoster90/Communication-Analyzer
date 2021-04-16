@@ -1,5 +1,3 @@
--- (don't add to this script CREATE SCHEMA, since it runs on 'sys' and not 'DATA_ANALYSIS'
-
 --- Creating tables and adding primary keys ---
 CREATE TABLE SENT (
 	id_sent INT NOT NULL,
@@ -11,6 +9,22 @@ CREATE TABLE SENT (
 	totalsentdelay INT NULL,
 	totalsentmessageDelay INT NULL,
 	averagesentdeliverydelay VARCHAR(20) NULL,
+	gprs_delay_sent int NULL,
+	perc_gprs_delay_sent VARCHAR(10) NULL,
+	gprs_non_queue_sent int NULL,
+	perc_gprs_non_queue_sent VARCHAR(10) NULL,
+	gprs_queue_sent int NULL,
+	perc_gprs_queue_sent VARCHAR(10) NULL,
+	inmarsat_delay_sent int NULL,
+	perc_inmarsat_delay_sent VARCHAR(10) NULL,
+	inmarsat_non_queue_sent int NULL,
+	perc_inmarsat_non_queue_sent VARCHAR(10) NULL,
+	inmarsat_queue_sent int NULL,
+	perc_inmarsat_queue_sent VARCHAR(10) NULL,
+	no_attempt_sent int NULL,
+	perc_no_attempt_sent VARCHAR(10) NULL,
+	perc_total_queue_sent VARCHAR(10) NULL,
+	perc_total_non_queue_sent VARCHAR(10) NULL,
 	regtimestamp DATE NOT NULL
 	);
 
@@ -27,6 +41,10 @@ CREATE TABLE RECEIVED (
 	totalreceiveddelay INT NULL,
 	totalreceivedmessagedelay INT NULL,
 	averagereceiveddeliverydelay VARCHAR(20) NULL,
+	gprs_delay_received int NULL,
+	perc_gprs_delay_received VARCHAR(10) NULL,
+	inmarsat_delay_received int NULL,
+	perc_inmarsat_delay_received VARCHAR(10) NULL,
 	regtimestamp DATE NOT NULL
 	);
 
@@ -103,6 +121,19 @@ CREATE TABLE LOCO (
 
 ALTER TABLE LOCO ADD PRIMARY KEY (id_loco);
 
+CREATE TABLE TIME_SERIES (
+	id_ts INT NOT NULL,
+	month INT NOT NULL,
+	year INT NOT NULL,
+	ts_date VARCHAR(20) NOT NULL,
+	sent INT NOT NULL, 
+	received INT NOT NULL,
+	total INT NOT NULL,
+	regtimestamp DATE NOT NULL
+	);
+
+ALTER TABLE TIME_SERIES ADD PRIMARY KEY (id_ts);
+
 --- Creating Sequences ---
 CREATE SEQUENCE SENT_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
 CREATE SEQUENCE RECEIVED_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
@@ -110,6 +141,7 @@ CREATE SEQUENCE TOTAL_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
 CREATE SEQUENCE GRAPHS_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
 CREATE SEQUENCE DF_SB_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
 CREATE SEQUENCE LOCO_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
+CREATE SEQUENCE TS_ID_SEQ START WITH 1 INCREMENT BY 1 NOCACHE;
 
 --- Uploading Images to Oracle Database ---
 create or replace NONEDITIONABLE PROCEDURE graphs_pr (month_param INT, year_param INT, density_param STRING, dispersion_all_param STRING,
