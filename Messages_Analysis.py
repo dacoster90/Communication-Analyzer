@@ -286,7 +286,7 @@ disp_total_graph(df_sb, month, year, images_location)
 # In[ ]:
 
 
-# Call function for creating horizontal barplot of sent, received and total SBs combined
+# Call function for creating horizontal barplot of sent, received and total SBs combined 
 barplot_all(df_sb, top10_Sent, top10_Received, top10_Total, month, year, images_location)
 
 

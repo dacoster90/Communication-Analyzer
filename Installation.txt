@@ -1,15 +1,10 @@
-1. Install Python (version Python 3.8.1)
-	1.1 To check wether you have Python already installed, open cmd and execute 'python --version'. In case the version appears, jump to step 2. If not, go to the next step (1.2).
-	1.2 Go to https://www.python.org/downloads/windows/
-	1.3 Choose the desired version of Python.
-	1.4 Download either the Windows x86-64 executable installer (for Windows 64 bits) or Windows x86 executable installer (for Windows 32 bits).
-	1.5 Once downloaded, run the Python Installer.
-	1.6 Make sure to mark the checkboxes 'Install launcher for all users' and 'Add Python X.X to PATH' on the Python Installer.
-	1.7 Select 'Install Now' on the Python Installer.
-	1.8 Once the Python Installer completes the installation, go to cmd and execute 'python --version' to see if the installation was successful.	
-2. Install Oracle (Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production Version 18.4.0.0.0)
+1. Install Python
+2. Install Oracle Database
 3. Run Package_Installer.bat to install Python Modules
-4. Run script: 1. Create Owner DATA_ANALYSIS.sql
-5. Run script: 2. Create Database DATA_ANALYSIS.sql
+4. Run script: 1. Create Owner DATA_ANALYIS.sql
+5. Run script: 2. Create Database DATA_ANALYSIS.sql 
+	5.1 Run it on the DATA_ANALYSIS schema.
 6. Run script: 3. Create IMAGES directory.sql
+	6.1 Run it on the DATA_ANALYSIS schema.
+	6.2 It is necessary to adjust the script with the proper path for the images directory
 7. Open the config.ini file and fill out all parameters
