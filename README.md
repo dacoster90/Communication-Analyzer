@@ -4,7 +4,7 @@
 The Communication Analyzer is an console application designed to analyze and provide insights about messages exchanged between Onboard Computers (or OBC) of locomotives and the Safety Train Control (or STC) of production railway operations based in Gabon. The STC is operated by dispatchers and is responsible for coordenating all railway traffic, such as providing proceed authorities, adding or removing speed restrictions and such. 
 The STC send out messages to the OBCs, so the equipment in the locomotives can behave accordingly. Also the OBC sends out information (such as location, or requests) back to the Control Centre. 
 
-A common issue with these architecture is the fact that message can suffer delays in their delivery, or even are not being delivered.
+A common issue with this architecture is the fact that message can suffer delays in their delivery, or even are not being delivered.
 
 ### Compatibility
 The Communication Analyzer is compatible with STC 1.7.x database and logfiles for Setrag. 
