@@ -34,7 +34,7 @@ The Communication Analyzer is compatible with the ABR 1.x logfiles for Setrag.
 5. Open the config.ini file and fill out all parameters.
 
 ### How to run
-1. Open CMD and navigate to the Communication Analyzer directory..
+1. Open CMD and navigate to the Communication Analyzer directory.
 2. Execute 'python Messages_Analysis.py'
 3. Insert month and year
 4. Whenever the application generates a chart image, please close it.
