@@ -6,7 +6,7 @@ The STC sends messages to the OBCs, so the equipment in the locomotives can beha
 
 A common issue with this architecture is the fact that message can suffer delays in their delivery, or even are not being delivered. This problem directly impacts the operations of the railroad. Before the development of this application, neither the software developer nor the client had really an idea of how many messages were delivered within an acceptable timeframe.There was no real way to actually measure this, besides looking at the number of tickets opened by the client (not really a good indicator though). That's when I got the idea to develop the Communication Analyzer. This tool provides information and insights, such as total messages sent, messages with delay, average message time, delays per channel, delays per locomotive, delays per block section and so on. It also generates different artificats, such as a dashboard (in PowerBI), a extensive Communication Report (in Word), logfiles and graphs (time-series, histograms, dispersion graphs etc.).
 
-### Languages and Technologies used
+### Languages and Technologies
 - Python
 - SQL
 - Power BI
