@@ -1,5 +1,5 @@
 @echo off
-title Python Package Installer MESSAGES_ANALYSIS
+title Python Package Installer Communication Analyzer
 pip install pandas
 pip install numpy
 pip install seaborn
@@ -8,3 +8,4 @@ pip install matplotlib
 pip install python-docx
 pip install docx2pdf
 pip install statsmodels
+pip install ipynb
